@@ -11,7 +11,7 @@ An array of `n` strings named `a`.
 An array of `n` strings named `b`.
 The function must return an array of strings where each index `i (0 ≤ i < n)` contains the string Yes if `ai` and `bi` are twins or the string No if they are not.
 
-###Input Format:
+### Input Format:
 The internal test cases will pass the following input to the program using the STDIN and expect output on the STDOUT:
 
 The first line contains an integer, n, denoting the number of elements in a.
@@ -22,12 +22,12 @@ The next line contains an integer, n, denoting the number of elements in b.
 
 Each line i of the n subsequent lines (where 0 ≤ i < n) contains a string describing bi.
 
-###Constraints:
+### Constraints:
 `1 ≤ n ≤ 103`
 `1 ≤ length(ai)`, `length(bi) ≤ 100`
 `ai` and `bi` are not guaranteed to have the same length.
 Strings ai and bi contain lowercase letters only (i.e., a through z).
-###Sample Input:
+### Sample Input:
 
 `2
 cdab
@@ -39,16 +39,16 @@ Sample Output:
 Yes
 No`
 
-###Explanation:
+### Explanation:
 Given `a = ["cdab", "dcba"]` and `b = ["abcd", "abcd"]`, we process each element like so:
 
 `a0 = "cdab"` and `b0 = "abcd"`: We store Yes in index 0 of the return array because `a0 = "cdab" → "adcb" → "abcd" = b0`.
 `a1 = "dcba"` and `b1 = "abcd"`: We store No in index 1 of the return array because no amount of operations will move a character from an odd index to an even index, so the two strings will never be equal.
 We then return the array `["Yes", "No"]` as our answer.
 
-####For example:
+#### For example:
 
-#####Input	
+##### Input	
 `2
 cdab
 dcba
@@ -56,6 +56,6 @@ dcba
 abcd
 abcd`
 
-#####Result
+##### Result
 `Yes
 No`
