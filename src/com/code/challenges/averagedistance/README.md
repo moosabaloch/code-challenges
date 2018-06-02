@@ -1,0 +1,1 @@
+Implement a function to calculate the average distance between three points in a single plane where the coordinates of these points are `(x1,y1)`, `(x2,y2)` and `(x3,y3)` 

@@ -1,0 +1,1 @@
+Implement a function to return the number with most occurrences in a given array. If two numbers have the same number of occurrences, that which has the lower value must be returned.

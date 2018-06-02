@@ -1,0 +1,1 @@
+Implement a function return wether a string is a palindrome or it could be a palindrome just by exchanging one of its characters.
