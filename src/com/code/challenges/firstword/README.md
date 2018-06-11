@@ -6,8 +6,7 @@ A call to `hasNext()` will return whether the stream contains any more character
 A call to `next()` will return the next character to be processed in the stream.
 It is not possible to restart the stream. 
 
-You can write any methods or classes you would like. However, all new classes must be written in this 
-file and you cannot change the FirstWordInStream class name, the `Stream` interface contract or the `firstWord()` method signature.
+You can write any methods or classes you would like. However, you cannot change the `Stream` interface contract.
 
 Example:
 --------
