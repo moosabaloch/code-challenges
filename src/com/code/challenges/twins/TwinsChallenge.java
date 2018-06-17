@@ -1,6 +1,7 @@
 package com.code.challenges.twins;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TwinsChallenge {
@@ -63,7 +64,7 @@ public class TwinsChallenge {
                 return true;
             }
             if (other instanceof Counter) {
-                return java.util.Arrays.equals(oddCounter, ((Counter) other).oddCounter) && java.util.Arrays.equals(evenCounter, ((Counter) other).evenCounter);
+                return Arrays.equals(oddCounter, ((Counter) other).oddCounter) && Arrays.equals(evenCounter, ((Counter) other).evenCounter);
             }
             return false;
         }

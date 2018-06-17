@@ -27,9 +27,10 @@ public class OrderedLogFiles {
             }
         }
 
-        alphaNumericLogLines.sort(LogLine::compareTo);
-        alphaNumericLogLines.addAll(numericLogLines);
-        return alphaNumericLogLines.stream().map(LogLine::toString).collect(Collectors.toList());
+        final LinkedList<LogLine> result = new LinkedList<>(alphaNumericLogLines);
+        result.sort(LogLine::compareTo);
+        result.addAll(numericLogLines);
+        return result.stream().map(LogLine::toString).collect(Collectors.toList());
     }
 
     private static class LogLine implements Comparable<LogLine> {

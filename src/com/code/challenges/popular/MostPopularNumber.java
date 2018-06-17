@@ -2,39 +2,25 @@ package com.code.challenges.popular;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * MostPopularNumber
- *
- * @author Luiz Azevedo
- * @version 1.0 31/05/18
- */
 public class MostPopularNumber {
 
     public static Integer mostPopularNumber(final int[] values, final int length) {
-        final Map<Integer, Integer> counterMap = new HashMap<>();
-
-        for (final int value : values) {
-            Integer valueCount = counterMap.get(value);
-            if (valueCount == null) {
-                counterMap.put(value, 1);
-            } else {
-                counterMap.put(value, valueCount++);
-            }
-        }
+        final Map<Integer, Integer> counter = new HashMap<>();
+        Arrays.stream(values).forEach(value -> counter.merge(value, 1, (a, b) -> (a + b)));
         int maxValue = Integer.MAX_VALUE;
         int maxCount = 0;
-        for (final Map.Entry<Integer, Integer> entry : counterMap.entrySet()) {
+        for (final Map.Entry<Integer, Integer> entry : counter.entrySet()) {
             if (entry.getValue() > maxCount && entry.getKey() < maxValue) {
                 maxCount = entry.getValue();
                 maxValue = entry.getKey();
             }
         }
-
         return maxValue;
     }
 

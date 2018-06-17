@@ -5,12 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Palindrome
- *
- * @author Luiz Azevedo
- * @version 1.0 31/05/18
- */
 public class Palindrome {
 
     public static boolean isAlmostPalindrome(final String value) {

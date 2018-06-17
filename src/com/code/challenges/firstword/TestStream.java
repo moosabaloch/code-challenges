@@ -3,12 +3,6 @@ package com.code.challenges.firstword;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/**
- * TestStream
- *
- * @author Luiz Azevedo
- * @version 1.0 11/06/18
- */
 class TestStream implements Stream {
     private final Iterator<Character> iterator;
 
